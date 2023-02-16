@@ -5,12 +5,12 @@ import '../models/meal.dart';
 const dummyCategories = [
   Category(
     id: 'c1',
-    title: 'Italiano',
+    title: 'Italian',
     color: Colors.purple,
   ),
   Category(
     id: 'c2',
-    title: 'Rápido & Fácil',
+    title: 'Fast and Easy',
     color: Colors.red,
   ),
   Category(
@@ -20,37 +20,37 @@ const dummyCategories = [
   ),
   Category(
     id: 'c4',
-    title: 'Alemã',
+    title: 'German',
     color: Colors.amber,
   ),
   Category(
     id: 'c5',
-    title: 'Leve & Saudável',
+    title: 'Light',
     color: Colors.indigo,
   ),
   Category(
     id: 'c6',
-    title: 'Exótica',
+    title: 'Exotic',
     color: Colors.green,
   ),
   Category(
     id: 'c7',
-    title: 'Café da Manhã',
+    title: 'Breakfast',
     color: Colors.lightBlue,
   ),
   Category(
     id: 'c8',
-    title: 'Asiática',
+    title: 'Asian',
     color: Colors.lightGreen,
   ),
   Category(
     id: 'c9',
-    title: 'Francesa',
+    title: 'French',
     color: Colors.pink,
   ),
   Category(
     id: 'c10',
-    title: 'Verão',
+    title: 'Summer',
     color: Colors.teal,
   ),
 ];
@@ -82,10 +82,6 @@ const dummyMeals = [
       'The sauce will be done once the spaghetti are.',
       'Feel free to add some cheese on top of the finished dish.'
     ],
-    isGlutenFree: false,
-    isVegan: true,
-    isVegetarian: true,
-    isLactoseFree: true,
   ),
   Meal(
     id: 'm2',
@@ -108,10 +104,6 @@ const dummyMeals = [
       'Layer ham, the pineapple and cheese on the white bread',
       'Bake the toast for round about 10 minutes in the oven at 200°C'
     ],
-    isGlutenFree: false,
-    isVegan: false,
-    isVegetarian: false,
-    isLactoseFree: false,
   ),
   Meal(
     id: 'm3',
@@ -137,10 +129,6 @@ const dummyMeals = [
       'Bruch buns with ketchup',
       'Serve burger with tomato, cucumber and onion'
     ],
-    isGlutenFree: false,
-    isVegan: false,
-    isVegetarian: false,
-    isLactoseFree: true,
   ),
   Meal(
     id: 'm4',
@@ -170,10 +158,6 @@ const dummyMeals = [
       'Remove, and drain on kitchen paper. Fry the parsley in the remaining oil and drain.',
       'Place the schnitzels on awarmed plate and serve garnishedwith parsley and slices of lemon.'
     ],
-    isGlutenFree: false,
-    isVegan: false,
-    isVegetarian: false,
-    isLactoseFree: false,
   ),
   Meal(
     id: 'm5',
@@ -202,10 +186,6 @@ const dummyMeals = [
       'Prepare the salad',
       'Add salmon cubes and dressing'
     ],
-    isGlutenFree: true,
-    isVegan: false,
-    isVegetarian: true,
-    isLactoseFree: true,
   ),
   Meal(
     id: 'm6',
@@ -235,10 +215,6 @@ const dummyMeals = [
       'Cool down again for at least 4 hours',
       'Serve with orange peel',
     ],
-    isGlutenFree: true,
-    isVegan: false,
-    isVegetarian: true,
-    isLactoseFree: false,
   ),
   Meal(
     id: 'm7',
@@ -264,10 +240,6 @@ const dummyMeals = [
       'Heat a lightly oiled griddle or frying pan over medium high heat.',
       'Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.'
     ],
-    isGlutenFree: true,
-    isVegan: false,
-    isVegetarian: true,
-    isLactoseFree: false,
   ),
   Meal(
     id: 'm8',
@@ -295,10 +267,6 @@ const dummyMeals = [
       'Add coconut milk',
       'Serve with rice'
     ],
-    isGlutenFree: true,
-    isVegan: false,
-    isVegetarian: false,
-    isLactoseFree: true,
   ),
   Meal(
     id: 'm9',
@@ -342,10 +310,6 @@ const dummyMeals = [
       'Stop mixing after the egg white disappears. Divide mixture between 2 prepared ramekins. Place ramekins on prepared baking sheet.',
       'Bake in preheated oven until scuffles are puffed and have risen above the top of the rims, 12 to 15 minutes.',
     ],
-    isGlutenFree: true,
-    isVegan: false,
-    isVegetarian: true,
-    isLactoseFree: false,
   ),
   Meal(
     id: 'm10',
@@ -372,9 +336,5 @@ const dummyMeals = [
       'Mix with asparagus, salad and dressing',
       'Serve with Baguette'
     ],
-    isGlutenFree: true,
-    isVegan: true,
-    isVegetarian: true,
-    isLactoseFree: true,
   ),
 ];

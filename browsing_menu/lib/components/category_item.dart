@@ -21,6 +21,7 @@ class CategoryItem extends StatelessWidget {
       splashColor: Theme.of(context).colorScheme.primary,
       borderRadius: BorderRadius.circular(15),
       child: Container(
+        alignment: Alignment.center,
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
@@ -35,7 +36,7 @@ class CategoryItem extends StatelessWidget {
         ),
         child: Text(
           category.title,
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.titleMedium,
         ),
       ),
     );

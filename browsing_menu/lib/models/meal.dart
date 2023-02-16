@@ -18,10 +18,6 @@ class Meal {
   final List<String> ingredients;
   final List<String> steps;
   final int duration;
-  final bool isGlutenFree;
-  final bool isLactoseFree;
-  final bool isVegan;
-  final bool isVegetarian;
   final Complexity complexity;
   final Cost cost;
 
@@ -33,10 +29,6 @@ class Meal {
     required this.ingredients,
     required this.steps,
     required this.duration,
-    required this.isGlutenFree,
-    required this.isLactoseFree,
-    required this.isVegan,
-    required this.isVegetarian,
     required this.complexity,
     required this.cost,
   });
@@ -44,26 +36,26 @@ class Meal {
   String get complexityText {
     switch (complexity) {
       case Complexity.simple:
-        return 'Simples';
+        return 'Simple';
       case Complexity.medium:
         return 'Normal';
       case Complexity.difficult:
-        return 'Difícil';
+        return 'Hard';
       default:
-        return 'Desconhecida';
+        return 'Unknown';
     }
   }
 
   String get costText {
     switch (cost) {
       case Cost.cheap:
-        return 'Barato';
+        return 'Cheap';
       case Cost.fair:
-        return 'Justo';
+        return 'Fair';
       case Cost.expensive:
-        return 'Caro';
+        return 'Expensive';
       default:
-        return 'Desconhecido';
+        return 'Unknown';
     }
   }
 }
