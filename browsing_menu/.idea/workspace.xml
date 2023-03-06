@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6c67e0e-d09c-4d7f-b2b8-97e3bb6613fa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../breedys/lib/view/single_item_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../breedys/lib/view/single_item_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/browsing_menu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/browsing_menu.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dog_breeds/lib/view/breed_item_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../dog_breeds/lib/view/breed_item_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pure_dart/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../pure_dart/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +15,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MCIMQxkViKadBlGiXdGMMZLlW6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

@@ -80,5 +80,6 @@ class BreedItemView extends StatelessWidget {
             MaterialPageRoute(
                 builder: (context) => SingleBreedView(name: name)),
           );
+
   }
 }

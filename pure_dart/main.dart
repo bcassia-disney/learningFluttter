@@ -8,7 +8,7 @@ main() {
 
   int _numberOfFrame = 1;
 
-  for (_numberOfFrame; _numberOfFrame <= 2; _numberOfFrame++) {
+  for (_numberOfFrame; _numberOfFrame <= 26; _numberOfFrame++) {
     while (game.initalRange == -1 || game.initalRange > 10) {
       print("Enter the inital value of range $_numberOfFrame");
 
