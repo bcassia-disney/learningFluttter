@@ -17,6 +17,5 @@ class BreedsListViewModel extends ChangeNotifier {
       images.add(newImage);
       notifyListeners();
     }
-
   }
 }
