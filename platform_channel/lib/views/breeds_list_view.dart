@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -7,9 +8,9 @@ import 'breed_item_view.dart';
 class BreedsListView extends ConsumerWidget {
   List<Breed> data;
   ScrollController controller;
-  Image? imageFile;
+  String? path;
 
-  BreedsListView({required this.data, required this.controller, required this.imageFile});
+  BreedsListView({required this.data, required this.controller, required this.path});
 
   @override
   Widget build(BuildContext context, ref) {
@@ -39,7 +40,7 @@ class BreedsListView extends ConsumerWidget {
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
                 children: List.generate(index == 0 ? 1 : data.length, (idx) {
-                  return index == 0 ?  cassia(imageFile): BreedItemView(
+                  return index == 0 ?  cassia(path): BreedItemView(
                     name: data[idx].name,
                     image: data[idx].image,
                   );
@@ -59,10 +60,12 @@ class BreedsListView extends ConsumerWidget {
     return "Breeds";
   }
 
-  Widget cassia(Image? file) {
+  Widget cassia(String? file) {
     if (file != null) {
-    return file;
+      var _bytesImage = Base64Decoder().convert(file);
+
+    return Center(child:  Image.memory(_bytesImage, fit: BoxFit.cover,));
     }
-   return Center(child: Text("CAssia"));
+   return Center(child: Text("Your image will appear here"));
   }
 }

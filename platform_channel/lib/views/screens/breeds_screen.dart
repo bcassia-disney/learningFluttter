@@ -2,14 +2,17 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:platform_channel/utils/image_picker_channel.dart';
 import '../../models/breed.dart';
 import '../../utils/data_provider.dart';
 import '../breeds_list_view.dart';
-import 'package:image_picker/image_picker.dart';
 
 class BreedsScreen extends ConsumerWidget  {
 
   BreedsScreen({super.key,});
+
+  var imagePicker = ImagePickerChannel();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -17,17 +20,16 @@ class BreedsScreen extends ConsumerWidget  {
   }
 
 
-  void _getFromGallery(ref) async {
-    var pickedFile = await ImagePicker().pickImage(
-      source: ImageSource.gallery);
+  void _getImage(ImageSourceType source, ref) async {
+    var pickedFile = await imagePicker.getImage(imageSource: source);
     if (pickedFile != null) {
-      ref.read(photoProvider.notifier).state = pickedFile.path;
+      ref.read(photoProvider.notifier).state = pickedFile;
     }
   }
 
   Scaffold _createScaffold(BuildContext context, ref) {
-    AsyncValue<List<Breed>> breeds =  ref.watch(breedProvider);
-    Image image = Image.file(File(ref.watch(photoProvider)));
+    AsyncValue<List<Breed>> breeds = ref.watch(breedProvider);
+    String? path = ref.watch(photoProvider);
 
     return Scaffold(
         appBar: AppBar(
@@ -60,12 +62,12 @@ class BreedsScreen extends ConsumerWidget  {
                 child: Text('$err'),
               );
             },
-            data: (items) => _createScrollBarView(context, items, image)
+            data: (items) => _createScrollBarView(context, items, path)
         )
     );
   }
 
-  Scrollbar _createScrollBarView(BuildContext context, List<Breed> data, Image? image) {
+  Scrollbar _createScrollBarView(BuildContext context, List<Breed> data, String? path) {
     final controller = ScrollController();
     return Scrollbar(
       controller: controller,
@@ -73,7 +75,7 @@ class BreedsScreen extends ConsumerWidget  {
         Padding(
           padding: const EdgeInsets.only(bottom: 10),
           child: BreedsListView(data: data, controller:
-          controller, imageFile: image),
+          controller, path: path),
         ),
         Platform.isAndroid
             ? Align(
@@ -123,14 +125,14 @@ class BreedsScreen extends ConsumerWidget  {
             actions: <CupertinoActionSheetAction>[
               CupertinoActionSheetAction(
                 onPressed: () {
-                  _getFromGallery(ref);
+                  _getImage(ImageSourceType.photos, ref);
                   Navigator.pop(context);
                 },
                 child: const Text('Gallery'),
               ),
               CupertinoActionSheetAction(
                 onPressed: () {
-                  _getFromGallery(ref);
+                  _getImage(ImageSourceType.camera, ref);
                   Navigator.pop(context);
                 },
                 child: const Text('Camera'),

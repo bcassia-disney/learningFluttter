@@ -47,6 +47,10 @@
 	<string>Access camera and photos</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Access camera and photos</string>
+	<key>NSBonjourServices</key>
+    <array>
+        <string>_dartobservatory._tcp</string>
+    </array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

@@ -8,8 +8,8 @@ import '../models/breed.dart';
 
 final serviceProvider = Provider<AppService>((ref) => AppService());
 
-final photoProvider = StateProvider<String>((ref) {
-  return "";
+final photoProvider = StateProvider<String?>((ref) {
+  return;
 });
 
 final breedProvider = FutureProvider<List<Breed>>((ref) async {
