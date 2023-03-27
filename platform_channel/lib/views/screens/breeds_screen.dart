@@ -2,7 +2,6 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:platform_channel/utils/image_picker_channel.dart';
 import '../../models/breed.dart';
 import '../../utils/data_provider.dart';

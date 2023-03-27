@@ -30,7 +30,8 @@ class FlutterChannelManager: NSObject, UINavigationControllerDelegate, UIImagePi
     init(flutterViewController: FlutterViewController) {
 
         self.flutterViewController = flutterViewController
-        channel = FlutterMethodChannel(name: "com.musevisions.flutter/imagePicker", binaryMessenger: flutterViewController.binaryMessenger)
+        channel = FlutterMethodChannel(name: "com.cassia/imagePicker", binaryMessenger: flutterViewController
+        .binaryMessenger)
     }
 
     func setup() {
@@ -61,4 +62,3 @@ class FlutterChannelManager: NSObject, UINavigationControllerDelegate, UIImagePi
         picker.dismiss(animated: true, completion: nil)
     }
 }
-

@@ -16,7 +16,7 @@ String _stringImageSource(ImageSourceType imageSource) {
 
 class ImagePickerChannel {
   static const platform =
-  const MethodChannel('com.musevisions.flutter/imagePicker');
+  const MethodChannel('com.cassia/imagePicker');
 
   Future<String> getImage({required ImageSourceType imageSource}) async {
     final stringImageSource = _stringImageSource(imageSource);
