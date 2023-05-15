@@ -60,8 +60,8 @@ class ChatNotificationService with ChangeNotifier {
     if (msg == null || msg.notification == null) return;
 
     add(ChatNotification(
-      title: msg.notification!.title ?? 'Não informado!',
-      body: msg.notification!.body ?? 'Não informado!',
+      title: msg.notification!.title ?? 'Not informed!',
+      body: msg.notification!.body ?? 'Not informed!',
     ));
   }
 }
