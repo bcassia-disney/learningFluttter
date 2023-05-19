@@ -16,7 +16,7 @@ class LoadingPage extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'Carregando...',
+              'Loading...',
               style: TextStyle(
                 color: Theme.of(context).primaryTextTheme.headline6?.color,
               ),

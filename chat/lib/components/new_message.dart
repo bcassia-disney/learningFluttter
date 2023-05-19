@@ -1,5 +1,6 @@
 import 'package:chat/core/services/auth/auth_service.dart';
 import 'package:chat/core/services/chat/chat_service.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 
 class NewMessage extends StatefulWidget {
@@ -10,6 +11,7 @@ class NewMessage extends StatefulWidget {
 }
 
 class _NewMessageState extends State<NewMessage> {
+  static FirebaseAnalytics analytics = FirebaseAnalytics.instance;
   String _message = '';
   final _messageController = TextEditingController();
 
@@ -23,8 +25,19 @@ class _NewMessageState extends State<NewMessage> {
     }
   }
 
+  Future<void> _sendMessageAnalyticsEvent(String message) async {
+    await analytics.logEvent(
+      name: 'send_message_event',
+      parameters: <String, dynamic>{
+        'message': message,
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+
+
     return Row(
       children: [
         Expanded(
@@ -32,11 +45,12 @@ class _NewMessageState extends State<NewMessage> {
             controller: _messageController,
             onChanged: (msg) => setState(() => _message = msg),
             decoration: InputDecoration(
-              labelText: 'Enviar mensagem...',
+              labelText: 'Send message...',
             ),
             onSubmitted: (_) {
               if (_message.trim().isNotEmpty) {
                 _sendMessage();
+                _sendMessageAnalyticsEvent(_message);
               }
             },
           ),
